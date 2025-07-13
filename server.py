@@ -5704,10 +5704,6 @@ info_logger.info(f"Approvers: {approver_data_for_control }")
     
 ############################ MAIN ############################
 if __name__ == "__main__":
-    # apsec_fetch_status, superapprover_data_for_control , approver_data_for_control, map_email_to_user_id, map_user_id_to_info = fetch_and_store_api_data()
-    
-    # info_logger.info(f"Super approvers: {superapprover_data_for_control}")
-    # info_logger.info(f"Approvers: {approver_data_for_control }")
     
 
     app.run("0.0.0.0", port=5003, debug=False, use_reloader=False)
