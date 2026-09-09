@@ -17,7 +17,7 @@ from utils.utils import get_setup_details, accumulator, process_config, citation
 from utils.utils_traceability import AITrace
 from utils.agent_enums import DisplayFormat
 from sklearn.metrics.pairwise import cosine_similarity
-
+import time
 
 class CitationTypes(str, Enum):
     normal = "Normal"
