@@ -106,16 +106,16 @@ def get_llm_config_api():
 
 
 if __name__ == '__main__':
-    # app.run(host="0.0.0.0", port=5002) # FIXME: Uncomment this before running locally
+    app.run(host="0.0.0.0", port=5002) # FIXME: Uncomment this before running locally
 
-    gunicorn_command = (
-        f"gunicorn --workers {Config.WORKER_COUNT} --worker-class gthread --bind 0.0.0.0:5002 "
-        f"--timeout {Config.WORKER_TIMEOUT} --keep-alive 120 --max-requests {Config.MAX_REQUEST_TO_WORKER_RESTART} --max-requests-jitter 50 "
-        f"--log-level info --threads {Config.WORKER_THREADS_COUNT} --access-logfile - --error-logfile - "
-        f"--graceful-timeout {Config.WORKER_GRACEFUL_TIMEOUT} --limit-request-line 8190 run:app"
-    )
+    # gunicorn_command = (
+    #     f"gunicorn --workers {Config.WORKER_COUNT} --worker-class gthread --bind 0.0.0.0:5002 "
+    #     f"--timeout {Config.WORKER_TIMEOUT} --keep-alive 120 --max-requests {Config.MAX_REQUEST_TO_WORKER_RESTART} --max-requests-jitter 50 "
+    #     f"--log-level info --threads {Config.WORKER_THREADS_COUNT} --access-logfile - --error-logfile - "
+    #     f"--graceful-timeout {Config.WORKER_GRACEFUL_TIMEOUT} --limit-request-line 8190 run:app"
+    # )
     
-    os.system(gunicorn_command)  # FIXME: Comment this before running locally
+    # os.system(gunicorn_command)  # FIXME: Comment this before running locally
 
 
 
