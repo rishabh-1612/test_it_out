@@ -11,7 +11,6 @@ from utils.utils import process_config, get_setup_details
 from flask_cors import cross_origin
 import google.cloud.logging
 import traceback
-import time
 
 
 logging.getLogger().handlers = []  # FIXME: Comment this before running locally
